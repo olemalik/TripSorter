@@ -24,3 +24,7 @@ The list should be defined in a format that's compatible with the input format. 
 2. From the visual studio nsvigate to TripSort.UnitTesst project
 3. Under the TripSort.UnitTesst project open the TranslportAPIUnitTest class file
 4. Right click anywhere inside a particular method in the class and click Run Test to do a unit test. To run all the tests you need to open the Test Explorer from the visual studio top ribbon.
+
+## Implemetation
+1. Factory Desgin pattern is used to extend the code to support new types of transportations 
+2. Bubble Sort Algorithm is used to sort the order of the boarding passes.
