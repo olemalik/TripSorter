@@ -69,32 +69,15 @@ public class Plane : Transportation
 
     public override string? message { get => GetMessage(); }
 
-    //public override string transportationNumber { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
-    /*protected readonly string transportationNumber;
-    protected readonly string seat;
-    protected readonly string gate;
-    protected readonly string baggage;
-
-
-    public Flight(Boarding boarding) : base(boarding)
-    {
-        transportationNumber = boarding.TransportationNumber;
-        seat = boarding.Seat!;
-        gate = boarding.Gate!;
-    }*/
-
     public new string GetMessage()
     {
         string message = string.Format(TripConstants.MESSAGE_PLANE_BOARDING, departure, transportationNumber, arrival, gate, seat);
-            //$"From {departure}, take flight {transportationNumber} to {arrival}. Gate {gate}, seat {seat}.";
+
         if (!string.IsNullOrEmpty(baggage))
         {
             message += string.Format(TripConstants.MESSAGE_PLANE_BOARDING_WITH_BAGGAGE, baggage);
-            //$"Baggage drops at ticket counter {baggage}.";
             return message;
         }
         return string.Format(TripConstants.MESSAGE_PLANE_BOARDING_WITHOUT_BAGGAGE, message);
-            //$" {message} Baggage will we automatically transferred from your last leg.";
     }
 }

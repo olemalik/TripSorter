@@ -12,7 +12,6 @@ public class TransportationService : ITransportationService
 
     public TransportationService(IWebHostEnvironment hostingEnvironment)
     {
-        //"/Users/malikahmed/Projects/TripSorter/TripSorter/TripSorter/"
         _projectRootPath = hostingEnvironment.ContentRootPath;
     }
 

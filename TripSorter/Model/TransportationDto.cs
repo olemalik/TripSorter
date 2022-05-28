@@ -1,5 +1,5 @@
 ﻿using System;
-namespace TripSorter.Interface
+namespace TripSorter.Model
 {
 	public class TransportationDto
 	{

@@ -46,7 +46,7 @@ public class Train : Transportation
     public override string? transportationNumber
     {
         get { return _transportationNumber; }
-        set { _transportationNumber = value!;}
+        set { _transportationNumber = value!; }
     }
 
     public override string? seat
@@ -70,20 +70,8 @@ public class Train : Transportation
 
     public override string? message { get => GetMessage(); }
 
-
-
-    /*protected readonly string transportationNumber;
-    protected readonly string seat;
-
-    public Train(Boarding boarding) :base(boarding)
-    {
-        transportationNumber = boarding.TransportationNumber;
-        seat = boarding.Seat!;
-    }*/
-
     public new string GetMessage()
     {
         return string.Format(TripConstants.MESSAGE_TRAIN_BOARDING, transportationNumber, departure, arrival, seat);
-            //$"Take train {transportationNumber} from {departure} to {arrival}. Sit in seat {seat}.";
     }
 }

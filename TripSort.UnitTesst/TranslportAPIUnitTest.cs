@@ -5,10 +5,9 @@ using TripSorter.Interface;
 using TripSorter.Services;
 using Microsoft.Extensions.DependencyInjection;
 using System.Net;
-using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using TripSorter.BLL;
 using TripSorter.Untilities;
+using TripSorter.Model;
 
 namespace TripSort.UnitTesst;
 
@@ -37,7 +36,7 @@ public class TranslportAPIUnitTest : IDisposable
 
     public void Dispose()
     {
-        //On Success or fail of the test need dispose the constructor initializations
+        //On Success or failure of the test need dispose the constructor initializations
         _server.Dispose();
         _client.Dispose();
     }
@@ -64,7 +63,7 @@ public class TranslportAPIUnitTest : IDisposable
         var firstBoarding = result.Where(w => w.departure == "Madrid"
                              && w.arrival == "Barcelona").FirstOrDefault();
         Assert.NotNull(firstBoarding);
-        Assert.Equal("Train", firstBoarding.transportationType);
+        Assert.Equal("Train", firstBoarding!.transportationType);
         Assert.Equal("78A", firstBoarding.transportationNumber);
         Assert.Equal("45B", firstBoarding.seat);
         string trainMessage = string.Format(TripConstants.MESSAGE_TRAIN_BOARDING,
@@ -117,6 +116,6 @@ public class TranslportAPIUnitTest : IDisposable
         Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
 
         var responseString = await response.Content.ReadAsStringAsync();
-        Assert.Null(responseString);
+        Assert.Empty(responseString);
     }
 }

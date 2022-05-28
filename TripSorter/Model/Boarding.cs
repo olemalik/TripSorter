@@ -7,12 +7,11 @@ namespace TripSorter.Model
     {
         public string Departure { get; set; } = string.Empty;
         public string Arrival { get; set; } = string.Empty;
-        public string TransportationType { get; set; }
+        public string TransportationType { get; set; } = string.Empty;
         public string TransportationNumber { get; set; } = string.Empty;
         public string? Seat { get; set; }
         public string? Gate { get; set; }
         public string? Baggage { get; set; }
-        //public string Message { get; set; }
     }
 }
 
