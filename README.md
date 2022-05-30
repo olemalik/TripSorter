@@ -12,12 +12,12 @@ You are given a stack of boarding cards for various transportations that will ta
 The list should be defined in a format that's compatible with the input format. The API is to be an internal ASP.NET (C#) API so it will only communicate with other parts of a .NET application, not server to server, nor server to client. Use txt file(s) to document the input your API, and output should be displayed as a listing page in HTML.
 
 ## How to run the code
-1. Since the development is done using .NET6, Visual Studio 2022 is requeed.
+1. Since the development is done using .NET6, Visual Studio 2022 is required.
 2. In the main repository folder,open the TripSorter.sln
 3. Before you run the appication , you nedd to set mutpiple startup projects as TripSort.UI and TripSorter
 4. Hit the play button to run
-5. When the build is suucess two tabs will be opened, one is the WebAPi Swagger and other is the user interface(UI)
-6. In the UI tab you should be able to see the boarding passess with a carouse.
+5. When the build is successful two tabs will be opened, one is the WebAPi Swagger and other is the user interface(UI)
+6. In the UI tab you should be able to see the boarding passess with a carousel.
 
 ## How to run the unit test
 1. Stop the visual studio, if it is in running state 
